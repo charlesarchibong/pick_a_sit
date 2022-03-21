@@ -1,0 +1,39 @@
+{
+    "lines": [
+        {
+            "number": "1",
+            "name": "Пример 1",
+            "departure": "2022-03-19T07:16:25.504402",
+            "gate": "12",
+            "onTime": false
+        },
+        {
+            "number": "2",
+            "name": "Пример 2",
+            "departure": "2022-03-19 07:16:25.504402",
+            "gate": "14",
+            "onTime": true
+        },
+        {
+            "number": "3",
+            "name": "Пример 3",
+            "departure": "2022-03-19 07:16:25.504402",
+            "gate": "16",
+            "onTime": true
+        },
+        {
+            "number": "4",
+            "name": "Пример 4",
+            "departure": "2022-03-19 07:16:25.504402",
+            "gate": "19",
+            "onTime": false
+        },
+        {
+            "number": "5",
+            "name": "Пример 5",
+            "departure": "2022-03-19 07:16:25.504402",
+            "gate": "21",
+            "onTime": true
+        }
+    ]
+}

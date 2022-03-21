@@ -1,0 +1,347 @@
+{
+    "1": [
+        {
+            "number": 1,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 2,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 3,
+            "price": 23.2,
+            "busLine": "1",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 4,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 5,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 6,
+            "price": 23.2,
+            "busLine": "1",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 7,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 8,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 9,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 10,
+            "price": 23.2,
+            "busLine": "1"
+        },
+        {
+            "number": 11,
+            "price": 23.2,
+            "busLine": "1"
+        }
+    ],
+    "2": [
+        {
+            "number": 1,
+            "price": 23.2,
+            "busLine": "2",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 2,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 3,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 4,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 5,
+            "price": 23.2,
+            "busLine": "2",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 6,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 7,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 8,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 9,
+            "price": 23.2,
+            "busLine": "2",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 10,
+            "price": 23.2,
+            "busLine": "2"
+        },
+        {
+            "number": 11,
+            "price": 23.2,
+            "busLine": "2"
+        }
+    ],
+    "3": [
+        {
+            "number": 1,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 2,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 3,
+            "price": 23.2,
+            "busLine": "3",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 4,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 5,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 6,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 7,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 8,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 9,
+            "price": 23.2,
+            "busLine": "3",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 10,
+            "price": 23.2,
+            "busLine": "3"
+        },
+        {
+            "number": 11,
+            "price": 23.2,
+            "busLine": "3"
+        }
+    ],
+    "4": [
+        {
+            "number": 1,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 2,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 3,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 4,
+            "price": 23.2,
+            "busLine": "4",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 5,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 6,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 7,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 8,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 9,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 10,
+            "price": 23.2,
+            "busLine": "4"
+        },
+        {
+            "number": 11,
+            "price": 23.2,
+            "busLine": "4",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        }
+    ],
+    "5": [
+        {
+            "number": 1,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 2,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 3,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 4,
+            "price": 23.2,
+            "busLine": "5",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 5,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 6,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 7,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 8,
+            "price": 23.2,
+            "busLine": "5",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 9,
+            "price": 23.2,
+            "busLine": "5",
+            "user": {
+                "firstName": "John",
+                "lastName": "Doe",
+                "image": "assets/images/ellipse.png"
+            }
+        },
+        {
+            "number": 10,
+            "price": 23.2,
+            "busLine": "5"
+        },
+        {
+            "number": 11,
+            "price": 23.2,
+            "busLine": "5"
+        }
+    ]
+}
