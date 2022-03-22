@@ -16,6 +16,7 @@ import 'get_bus_lines_usecase_test.mocks.dart';
 
 @GenerateMocks([PickSeatRepository])
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late MockPickSeatRepository mockPickSeatRepository;
   late GetBusLinesUsecase getBusLinesUsecase;
   late List<BusLineEntity> busLineEntities;

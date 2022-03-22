@@ -14,6 +14,7 @@ import 'get_seats_usecase_test.mocks.dart';
 
 @GenerateMocks([PickSeatRepository])
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late MockPickSeatRepository mockPickSeatRepository;
   late GetSeatsUsecase getSeatsUsecase;
 

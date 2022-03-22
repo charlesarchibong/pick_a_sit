@@ -7,6 +7,7 @@ import 'package:pick_a_sit/features/pick_seat/data/models/user_model.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/entities/seat_entity.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   const tSeatModel = SeatModel(
     number: 3,
     price: 23.2,

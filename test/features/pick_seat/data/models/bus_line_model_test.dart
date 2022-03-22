@@ -6,6 +6,7 @@ import 'package:pick_a_sit/features/pick_seat/data/models/bus_line_model.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/entities/bus_line_entity.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   final tBusLineModel = BusLineModel(
     name: 'Пример 1',
     departure: DateTime.parse('2022-03-19 07:16:25.504402'),
