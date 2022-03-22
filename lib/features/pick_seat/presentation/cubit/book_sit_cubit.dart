@@ -58,7 +58,7 @@ class BookSitCubit extends Cubit<BookSitState> {
     );
     result.fold(
       (l) => emit(BookSitState.error(ConvertFailureToString()(l))),
-      (r) => emit(const BookSitState.booked()),
+      (r) => emit(BookSitState.booked(seatNumber.toString())),
     );
     return result.isRight();
   }

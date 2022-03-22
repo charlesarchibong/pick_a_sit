@@ -114,7 +114,7 @@ void main() {
       ),
       expect: () => [
         const BookSitState.loading(),
-        const BookSitState.booked(),
+        const BookSitState.booked('3'),
       ],
     );
 

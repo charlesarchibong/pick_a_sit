@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
 import 'package:pick_a_sit/core/errors/error.dart';
 import 'package:pick_a_sit/core/errors/failure.dart';
 import 'package:pick_a_sit/features/pick_seat/data/datasources/pick_seat_remote_data_source.dart';
@@ -8,6 +9,7 @@ import 'package:pick_a_sit/features/pick_seat/domain/entities/user_entity.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/repositories/pick_seat_repository.dart';
 
 /// this is the implementation of the [PickSeatRepository]
+@LazySingleton(as: PickSeatRepository)
 class PickSeatRepositoryImpl implements PickSeatRepository {
   /// [PickSeatRepositoryImpl] constructor
   PickSeatRepositoryImpl(this.pickSeatRemoteDataSource);
