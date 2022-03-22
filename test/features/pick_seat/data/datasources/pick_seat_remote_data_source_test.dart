@@ -12,6 +12,7 @@ import 'pick_seat_remote_data_source_test.mocks.dart';
 
 @GenerateMocks([NetworkInfo])
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late MockNetworkInfo mockNetworkInfo;
   late PickSeatRemoteDataSourceImpl pickSeatRemoteDataSourceImpl;
 
