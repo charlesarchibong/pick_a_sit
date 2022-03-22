@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+import 'package:pick_a_sit/core/constants/assets.dart';
+import 'package:pick_a_sit/core/constants/color.dart';
 import 'package:pick_a_sit/core/di/sl.dart';
 import 'package:pick_a_sit/features/pick_seat/presentation/cubit/pick_sit_cubit.dart';
 import 'package:pick_a_sit/features/pick_seat/presentation/cubit/pick_sit_state.dart';
@@ -45,13 +47,47 @@ class BusLinesPage extends StatelessWidget {
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Gap(50),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset(
+                                    AppAssets.logo,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Text(
+                                        'Jen Thomas',
+                                        style: TextStyle(
+                                          color: AppColors.blueDark,
+                                          fontSize: 12,
+                                        ),
+                                      ),
+                                      const Gap(12),
+                                      Container(
+                                        width: 35,
+                                        height: 35,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          image: DecorationImage(
+                                            image: AssetImage(
+                                              AppAssets.userAvatar,
+                                            ),
+                                          ),
+                                        ),
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                              const Gap(19),
                               const Text(
                                 'PICK YOUR RIDE',
                                 textAlign: TextAlign.left,
                                 style: TextStyle(
                                   color: Color(0XFFB6CEEA),
                                   fontSize: 32,
+                                  fontWeight: FontWeight.w400,
                                 ),
                               ),
                               const Gap(70),

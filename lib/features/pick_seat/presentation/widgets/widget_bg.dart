@@ -26,6 +26,7 @@ class WidgetBg extends StatelessWidget {
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomRight,
+          stops: [0.2, .78],
         ),
       ),
       child: child,
