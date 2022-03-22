@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pick_a_sit/features/pick_seat/data/datasources/fixtures/fixture.dart';
+import 'package:pick_a_sit/features/pick_seat/data/datasources/fixture.dart';
 import 'package:pick_a_sit/features/pick_seat/data/models/bus_line_model.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/entities/bus_line_entity.dart';
 
@@ -21,7 +21,7 @@ void main() {
   group('fromJson', () {
     test('should return a [BusLineModel] when the json is valid', () async {
       final jsonMap =
-          json.decode(fixture('bus_lines.json')) as Map<String, dynamic>;
+          json.decode(await fixture('bus_lines.json')) as Map<String, dynamic>;
 
       final list = jsonMap['lines'] as List;
       final first = BusLineModel.fromJson(list[0] as Map<String, dynamic>);
@@ -34,7 +34,7 @@ void main() {
     test('should return a json object of bus_line model', () async {
       final result = tBusLineModel.toJson();
       final jsonMap =
-          json.decode(fixture('bus_lines.json')) as Map<String, dynamic>;
+          json.decode(await fixture('bus_lines.json')) as Map<String, dynamic>;
 
       final list = jsonMap['lines'] as List;
       expect(

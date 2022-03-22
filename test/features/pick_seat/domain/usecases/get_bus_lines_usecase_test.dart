@@ -6,7 +6,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pick_a_sit/core/errors/failure.dart';
 import 'package:pick_a_sit/core/usecase/usecase.dart';
-import 'package:pick_a_sit/features/pick_seat/data/datasources/fixtures/fixture.dart';
+import 'package:pick_a_sit/features/pick_seat/data/datasources/fixture.dart';
 import 'package:pick_a_sit/features/pick_seat/data/models/bus_line_model.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/entities/bus_line_entity.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/repositories/pick_seat_repository.dart';
@@ -20,11 +20,11 @@ void main() {
   late GetBusLinesUsecase getBusLinesUsecase;
   late List<BusLineEntity> busLineEntities;
 
-  setUp(() {
+  setUp(() async {
     mockPickSeatRepository = MockPickSeatRepository();
     getBusLinesUsecase = GetBusLinesUsecase(mockPickSeatRepository);
     final jsonMap =
-        json.decode(fixture('bus_lines.json')) as Map<String, dynamic>;
+        json.decode(await fixture('bus_lines.json')) as Map<String, dynamic>;
 
     final list = jsonMap['lines'] as List;
     busLineEntities = list

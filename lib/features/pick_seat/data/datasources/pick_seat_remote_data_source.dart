@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:injectable/injectable.dart';
 import 'package:pick_a_sit/core/errors/error.dart';
 import 'package:pick_a_sit/core/network/network_info.dart';
-import 'package:pick_a_sit/features/pick_seat/data/datasources/fixtures/fixture.dart';
+import 'package:pick_a_sit/features/pick_seat/data/datasources/fixture.dart';
 import 'package:pick_a_sit/features/pick_seat/data/models/bus_line_model.dart';
 import 'package:pick_a_sit/features/pick_seat/data/models/seat_model.dart';
 import 'package:pick_a_sit/features/pick_seat/data/models/user_model.dart';
@@ -65,7 +65,7 @@ class PickSeatRemoteDataSourceImpl implements PickSeatRemoteDataSource {
   Future<List<BusLineModel>> getBusLines() async {
     if (await networkInfo.isConnected) {
       final jsonMap =
-          json.decode(fixture('bus_lines.json')) as Map<String, dynamic>;
+          json.decode(await fixture('bus_lines.json')) as Map<String, dynamic>;
       return Future.delayed(const Duration(seconds: 1), () {
         return (jsonMap['lines'] as List).map((e) {
           return BusLineModel.fromJson(e);
@@ -81,7 +81,8 @@ class PickSeatRemoteDataSourceImpl implements PickSeatRemoteDataSource {
     String busLine,
   ) async {
     if (await networkInfo.isConnected) {
-      final jsonMap = json.decode(fixture('seat.json')) as Map<String, dynamic>;
+      final jsonMap =
+          json.decode(await fixture('seat.json')) as Map<String, dynamic>;
       final list = jsonMap[busLine] as List;
       return Future.delayed(
         const Duration(seconds: 1),

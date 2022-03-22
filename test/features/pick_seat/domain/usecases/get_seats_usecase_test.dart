@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pick_a_sit/core/errors/failure.dart';
-import 'package:pick_a_sit/features/pick_seat/data/datasources/fixtures/fixture.dart';
+import 'package:pick_a_sit/features/pick_seat/data/datasources/fixture.dart';
 import 'package:pick_a_sit/features/pick_seat/data/models/seat_model.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/repositories/pick_seat_repository.dart';
 import 'package:pick_a_sit/features/pick_seat/domain/usecases/get_seats_usecase.dart';
@@ -24,7 +24,8 @@ void main() {
 
   group('getSeats', () {
     test('should return seats when all goes well', () async {
-      final jsonMap = json.decode(fixture('seat.json')) as Map<String, dynamic>;
+      final jsonMap =
+          json.decode(await fixture('seat.json')) as Map<String, dynamic>;
 
       final list = (jsonMap['1'] as List).map((e) {
         return SeatModel.fromJson(e);
