@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:pick_a_sit/core/constants/assets.dart';
 
@@ -19,39 +21,48 @@ class ConfirmBookingWidget extends StatelessWidget {
       width: 228,
       child: Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(8),
         ),
-        color: Colors.white,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 32,
-            vertical: 25,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Stack(
+        color: Colors.white.withOpacity(.5),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(
+              sigmaX: 11,
+              sigmaY: 11,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 32,
+                vertical: 25,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    'SEAT $number IS BOOKED \nFOR YOU;-)',
-                    style: const TextStyle(
-                      height: 1.65,
-                      color: Color(0XFF4672A5),
-                      fontSize: 18,
-                    ),
+                  Stack(
+                    children: [
+                      Text(
+                        'SEAT $number IS BOOKED \nFOR YOU;-)',
+                        style: const TextStyle(
+                          height: 1.65,
+                          color: Color(0XFF4672A5),
+                          fontSize: 18,
+                        ),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: Image.asset(
+                          AppAssets.thumbsUp,
+                          height: 36,
+                          width: 36,
+                        ),
+                      )
+                    ],
                   ),
-                  Positioned(
-                    bottom: 0,
-                    right: 0,
-                    child: Image.asset(
-                      AppAssets.thumbsUp,
-                      height: 36,
-                      width: 36,
-                    ),
-                  )
                 ],
               ),
-            ],
+            ),
           ),
         ),
       ),

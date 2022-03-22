@@ -45,128 +45,131 @@ class PickSeatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return WidgetBg(
-      child: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const Gap(50),
-                Row(
-                  children: const [
-                    Text(
-                      'PICK YOUR SEAT',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Color(0XFFB6CEEA),
-                        fontSize: 32,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const Gap(50),
+                  Row(
+                    children: const [
+                      Text(
+                        'PICK YOUR SEAT',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Color(0XFFB6CEEA),
+                          fontSize: 32,
+                        ),
                       ),
+                    ],
+                  ),
+                  const Gap(23),
+                  SizedBox(
+                    width: 215,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          busLineEntity.number,
+                          textAlign: TextAlign.left,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          busLineEntity.name,
+                          textAlign: TextAlign.left,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Text(
+                          DateFormat('KK.mm').format(busLineEntity.departure),
+                          textAlign: TextAlign.left,
+                          style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                const Gap(23),
-                SizedBox(
-                  width: 215,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        busLineEntity.number,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                        ),
-                      ),
-                      Text(
-                        busLineEntity.name,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                        ),
-                      ),
-                      Text(
-                        DateFormat('KK.mm').format(busLineEntity.departure),
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ],
                   ),
-                ),
-                const Gap(18),
-                SizedBox(
-                  height: 459,
-                  width: 179,
-                  child: Stack(
-                    children: [
-                      Image.asset(
-                        AppAssets.busSeats,
-                        height: 459,
-                        width: 179,
-                      ),
-                      const SeatNumberWidget(
-                        number: '1',
-                        top: 60,
-                        right: 87,
-                      ),
-                      const SeatNumberWidget(
-                        number: '2',
-                        top: 95,
-                        right: 87,
-                      ),
-                      const SeatNumberWidget(
-                        number: '3',
-                        top: 130,
-                        right: 87,
-                      ),
-                      const SeatNumberWidget(
-                        number: '4',
-                        top: 65,
-                        right: 22,
-                      ),
-                      const SeatNumberWidget(
-                        number: '5',
-                        top: 125,
-                        right: 22,
-                      ),
-                      const SeatNumberWidget(
-                        number: '6',
-                        top: 193,
-                        right: 98,
-                      ),
-                      const SeatNumberWidget(
-                        number: '7',
-                        top: 272,
-                        right: 100,
-                      ),
-                      const SeatNumberWidget(
-                        number: '8',
-                        top: 193,
-                        right: 22,
-                      ),
-                      const SeatNumberWidget(
-                        number: '9',
-                        top: 274,
-                        right: 22,
-                      ),
-                      const SeatNumberWidget(
-                        number: '10',
-                        top: 395,
-                        right: 98,
-                      ),
-                      const SeatNumberWidget(
-                        number: '11',
-                        top: 395,
-                        right: 25,
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                  const Gap(18),
+                  SizedBox(
+                    height: 459,
+                    width: 179,
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          AppAssets.busSeats,
+                          height: 459,
+                          width: 179,
+                        ),
+                        const SeatNumberWidget(
+                          number: '1',
+                          top: 60,
+                          right: 87,
+                        ),
+                        const SeatNumberWidget(
+                          number: '2',
+                          top: 95,
+                          right: 87,
+                        ),
+                        const SeatNumberWidget(
+                          number: '3',
+                          top: 130,
+                          right: 87,
+                        ),
+                        const SeatNumberWidget(
+                          number: '4',
+                          top: 65,
+                          right: 22,
+                        ),
+                        const SeatNumberWidget(
+                          number: '5',
+                          top: 125,
+                          right: 22,
+                        ),
+                        const SeatNumberWidget(
+                          number: '6',
+                          top: 193,
+                          right: 98,
+                        ),
+                        const SeatNumberWidget(
+                          number: '7',
+                          top: 272,
+                          right: 100,
+                        ),
+                        const SeatNumberWidget(
+                          number: '8',
+                          top: 193,
+                          right: 22,
+                        ),
+                        const SeatNumberWidget(
+                          number: '9',
+                          top: 274,
+                          right: 22,
+                        ),
+                        const SeatNumberWidget(
+                          number: '10',
+                          top: 395,
+                          right: 98,
+                        ),
+                        const SeatNumberWidget(
+                          number: '11',
+                          top: 395,
+                          right: 25,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

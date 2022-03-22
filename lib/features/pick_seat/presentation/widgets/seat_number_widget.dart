@@ -30,6 +30,7 @@ class SeatNumberWidget extends StatelessWidget {
         onTap: () {
           showDialog(
             context: context,
+            barrierColor: Colors.transparent,
             builder: (context) {
               return Center(
                 child: SelectSeatWidget(
