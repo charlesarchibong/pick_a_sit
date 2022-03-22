@@ -22,5 +22,5 @@ class BookSitState with _$BookSitState {
       _$LoadedBookSitState;
 
   /// Create a [BookSitState.booked] with a [BookSitState]
-  const factory BookSitState.booked() = _$BookedBookSitState;
+  const factory BookSitState.booked(String sitNumber) = _$BookedBookSitState;
 }

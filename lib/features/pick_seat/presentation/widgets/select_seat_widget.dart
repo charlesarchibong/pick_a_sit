@@ -1,8 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:pick_a_sit/features/pick_seat/presentation/widgets/confirm_booking_widget.dart';
+import 'package:pick_a_sit/core/constants/assets.dart';
+import 'package:pick_a_sit/features/pick_seat/domain/entities/user_entity.dart';
+import 'package:pick_a_sit/features/pick_seat/presentation/cubit/book_sit_cubit.dart';
 
 ///[SelectSeatWidget] is the class that represents
 /// the select seat widget
@@ -11,10 +14,15 @@ class SelectSeatWidget extends StatelessWidget {
   const SelectSeatWidget({
     Key? key,
     required this.number,
+    required this.cubitContext,
   }) : super(key: key);
 
   /// [number] is the number of the seat
   final String number;
+
+  /// [cubitContext] is the cubit context
+  /// of the book sit cubit
+  final BuildContext cubitContext;
 
   @override
   Widget build(BuildContext context) {
@@ -89,17 +97,15 @@ class SelectSeatWidget extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           Navigator.pop(context);
-                          showDialog(
-                            context: context,
-                            barrierColor: Colors.transparent,
-                            builder: (context) {
-                              return Center(
-                                child: ConfirmBookingWidget(
-                                  number: number,
+                          cubitContext.read<BookSitCubit>().bookSeat(
+                                number,
+                                int.parse(number),
+                                const UserEntity(
+                                  image: AppAssets.userAvatar,
+                                  firstName: 'Charles',
+                                  lastName: 'Babbage',
                                 ),
                               );
-                            },
-                          );
                         },
                         child: Container(
                           width: 82,

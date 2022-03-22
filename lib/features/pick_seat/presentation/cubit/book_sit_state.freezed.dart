@@ -38,8 +38,10 @@ class _$BookSitStateTearOff {
     );
   }
 
-  _$BookedBookSitState booked() {
-    return const _$BookedBookSitState();
+  _$BookedBookSitState booked(String sitNumber) {
+    return _$BookedBookSitState(
+      sitNumber,
+    );
   }
 }
 
@@ -54,7 +56,7 @@ mixin _$BookSitState {
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(List<SeatEntity> seats) loaded,
-    required TResult Function() booked,
+    required TResult Function(String sitNumber) booked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,7 +65,7 @@ mixin _$BookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,7 +74,7 @@ mixin _$BookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -167,7 +169,7 @@ class _$_$InitialBookSitState implements _$InitialBookSitState {
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(List<SeatEntity> seats) loaded,
-    required TResult Function() booked,
+    required TResult Function(String sitNumber) booked,
   }) {
     return initial();
   }
@@ -179,7 +181,7 @@ class _$_$InitialBookSitState implements _$InitialBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
   }) {
     return initial?.call();
   }
@@ -191,7 +193,7 @@ class _$_$InitialBookSitState implements _$InitialBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -290,7 +292,7 @@ class _$_$LoadingBookSitState implements _$LoadingBookSitState {
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(List<SeatEntity> seats) loaded,
-    required TResult Function() booked,
+    required TResult Function(String sitNumber) booked,
   }) {
     return loading();
   }
@@ -302,7 +304,7 @@ class _$_$LoadingBookSitState implements _$LoadingBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
   }) {
     return loading?.call();
   }
@@ -314,7 +316,7 @@ class _$_$LoadingBookSitState implements _$LoadingBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -437,7 +439,7 @@ class _$_$ErrorBookSitState implements _$ErrorBookSitState {
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(List<SeatEntity> seats) loaded,
-    required TResult Function() booked,
+    required TResult Function(String sitNumber) booked,
   }) {
     return error(message);
   }
@@ -449,7 +451,7 @@ class _$_$ErrorBookSitState implements _$ErrorBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
   }) {
     return error?.call(message);
   }
@@ -461,7 +463,7 @@ class _$_$ErrorBookSitState implements _$ErrorBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -590,7 +592,7 @@ class _$_$LoadedBookSitState implements _$LoadedBookSitState {
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(List<SeatEntity> seats) loaded,
-    required TResult Function() booked,
+    required TResult Function(String sitNumber) booked,
   }) {
     return loaded(seats);
   }
@@ -602,7 +604,7 @@ class _$_$LoadedBookSitState implements _$LoadedBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
   }) {
     return loaded?.call(seats);
   }
@@ -614,7 +616,7 @@ class _$_$LoadedBookSitState implements _$LoadedBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -679,6 +681,7 @@ abstract class _$$BookedBookSitStateCopyWith<$Res> {
   factory _$$BookedBookSitStateCopyWith(_$BookedBookSitState value,
           $Res Function(_$BookedBookSitState) then) =
       __$$BookedBookSitStateCopyWithImpl<$Res>;
+  $Res call({String sitNumber});
 }
 
 /// @nodoc
@@ -691,26 +694,50 @@ class __$$BookedBookSitStateCopyWithImpl<$Res>
 
   @override
   _$BookedBookSitState get _value => super._value as _$BookedBookSitState;
+
+  @override
+  $Res call({
+    Object? sitNumber = freezed,
+  }) {
+    return _then(_$BookedBookSitState(
+      sitNumber == freezed
+          ? _value.sitNumber
+          : sitNumber // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_$BookedBookSitState implements _$BookedBookSitState {
-  const _$_$BookedBookSitState();
+  const _$_$BookedBookSitState(this.sitNumber);
+
+  @override
+  final String sitNumber;
 
   @override
   String toString() {
-    return 'BookSitState.booked()';
+    return 'BookSitState.booked(sitNumber: $sitNumber)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$BookedBookSitState);
+        (other.runtimeType == runtimeType &&
+            other is _$BookedBookSitState &&
+            const DeepCollectionEquality().equals(other.sitNumber, sitNumber));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(sitNumber));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$BookedBookSitStateCopyWith<_$BookedBookSitState> get copyWith =>
+      __$$BookedBookSitStateCopyWithImpl<_$BookedBookSitState>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -719,9 +746,9 @@ class _$_$BookedBookSitState implements _$BookedBookSitState {
     required TResult Function() loading,
     required TResult Function(String message) error,
     required TResult Function(List<SeatEntity> seats) loaded,
-    required TResult Function() booked,
+    required TResult Function(String sitNumber) booked,
   }) {
-    return booked();
+    return booked(sitNumber);
   }
 
   @override
@@ -731,9 +758,9 @@ class _$_$BookedBookSitState implements _$BookedBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
   }) {
-    return booked?.call();
+    return booked?.call(sitNumber);
   }
 
   @override
@@ -743,11 +770,11 @@ class _$_$BookedBookSitState implements _$BookedBookSitState {
     TResult Function()? loading,
     TResult Function(String message)? error,
     TResult Function(List<SeatEntity> seats)? loaded,
-    TResult Function()? booked,
+    TResult Function(String sitNumber)? booked,
     required TResult orElse(),
   }) {
     if (booked != null) {
-      return booked();
+      return booked(sitNumber);
     }
     return orElse();
   }
@@ -794,5 +821,10 @@ class _$_$BookedBookSitState implements _$BookedBookSitState {
 }
 
 abstract class _$BookedBookSitState implements BookSitState {
-  const factory _$BookedBookSitState() = _$_$BookedBookSitState;
+  const factory _$BookedBookSitState(String sitNumber) = _$_$BookedBookSitState;
+
+  String get sitNumber;
+  @JsonKey(ignore: true)
+  _$$BookedBookSitStateCopyWith<_$BookedBookSitState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

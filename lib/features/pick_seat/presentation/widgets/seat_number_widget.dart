@@ -31,10 +31,11 @@ class SeatNumberWidget extends StatelessWidget {
           showDialog(
             context: context,
             barrierColor: Colors.transparent,
-            builder: (context) {
+            builder: (_) {
               return Center(
                 child: SelectSeatWidget(
                   number: number,
+                  cubitContext: context,
                 ),
               );
             },
